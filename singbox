@@ -1,0 +1,227 @@
+{
+    "log": {
+        "level": "info",
+        "output": "box.log",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "type": "https",
+                "tag": "local",
+                "server": "8.217.246.48",
+                "server_port": 5443,
+                "path": "@meow_is_top1/dns-query"
+            },
+            {
+                "type": "fakeip",
+                "tag": "fakeip",
+                "inet4_range": "198.18.0.0/15",
+                "inet6_range": "fc00::/18"
+            }
+        ],
+        "rules": [
+            {
+                "rule_set": [
+                    "fake-ip-filter",
+                    "private",
+                    "cn"
+                ],
+                "server": "local"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "action": "route-options",
+                "rewrite_ttl": 0
+            }
+        ],
+        "independent_cache": true
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "address": [
+                "172.19.0.0/30",
+                "fdfe:dcba:9876::/126"
+            ],
+            "auto_route": true,
+            "strict_route": true
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "proxy",
+            "outbounds": [
+                "direct"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "telegram",
+            "outbounds": [
+                "direct"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "spotify",
+            "outbounds": [
+                "direct"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "final",
+            "outbounds": [
+                "direct",
+                "proxy"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "action": "resolve"
+            },
+            {
+                "action": "sniff",
+                "sniffer": [
+                    "http",
+                    "tls",
+                    "quic",
+                    "dns"
+                ],
+                "timeout": "1s"
+            },
+            {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "port": 53
+                    },
+                    {
+                        "protocol": "dns"
+                    }
+                ],
+                "action": "hijack-dns"
+            },
+            {
+                "rule_set": "httpdns",
+                "action": "reject",
+                "method": "default"
+            },
+            {
+                "rule_set": "telegram",
+                "outbound": "telegram"
+            },
+            {
+                "rule_set": "spotify",
+                "outbound": "spotify"
+            },
+            {
+                "rule_set": "gfw",
+                "outbound": "proxy"
+            },
+            {
+                "rule_set": "geolocation-!cn",
+                "outbound": "proxy"
+            },
+            {
+                "rule_set": "private",
+                "outbound": "direct"
+            },
+            {
+                "rule_set": "cn",
+                "outbound": "direct"
+            }
+        ],
+        "rule_set": [
+            {
+                "type": "remote",
+                "tag": "private",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/private.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "cn",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "spotify",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "gfw",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/gfw.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "geolocation-!cn",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "telegram",
+                "format": "source",
+                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/Public/refs/heads/rule_set/telegram.json",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "httpdns",
+                "format": "source",
+                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/Public/refs/heads/rule_set/httpdns.json",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "fake-ip-filter",
+                "format": "binary",
+                "url": "https://ghfast.top/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/fakeip-filter.srs",
+                "download_detour": "direct"
+            }
+        ],
+        "final": "final",
+        "auto_detect_interface": true,
+        "default_domain_resolver": "local"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "./cache.db",
+            "cache_id": "v1",
+            "store_fakeip": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "zashboard",
+            "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+            "external_ui_download_detour": "direct"
+        }
+    }
+}
