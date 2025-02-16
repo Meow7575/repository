@@ -1,0 +1,124 @@
+# Alibaba
+DOMAIN,httpdns.alicdn.com
+
+# Aliyun
+httpdns-api.aliyuncs.com
+httpdns-sc.aliyuncs.com
+httpdns.alicdn.com
+IP-CIDR,203.107.1.0/24
+
+# Baidu
+httpdns.baidu.com
+httpdns.baidubce.com
+httpdns.bcelive.com
+httpdns.n.shifen.com
+httpsdns.baidu.com
+
+# BaiduBCE
+DOMAIN,httpdns.baidubce.com
+IP-CIDR,186.76.76.200/32
+
+# Huawei Cloud
+httpdns-browser.platform.dbankcloud.cn
+httpdns.c.cdnhwc2.com
+httpdns.huaweicloud.com
+httpdns.platform.dbankcloud.cn
+httpdns.platform.dbankcloud.com
+httpdns1.cc.cdnhwc5.com
+
+# iqiyi
+dns.iqiyi.com
+dns.qiyipic.iqiyi.com
+doh.iqiyi.com
+
+# Kuaishou
+hdns.ksyun.com
+kuaishou.httpdns.pro
+
+# Bilibili
+DOMAIN,httpdns.bilivideo.com
+
+# Huawei
+DOMAIN,httpdns.c.cdnhwc2.com
+
+# JD
+DOMAIN,dns.jd.com
+IP-CIDR,101.124.19.122/32
+IP-CIDR6,2402:db40:5100:1011::5/128
+
+# JD Cloud
+IP-CIDR,103.224.222.208/32
+
+# Keep
+DOMAIN,httpdns.calorietech.com
+
+# Kuaishou
+DOMAIN,kuaishou.httpdns.pro
+
+# Meituan
+DOMAIN,httpdns.meituan.com
+
+# NetEase
+DOMAIN,httpdns.yunxindns.com
+DOMAIN,httpdns.n.netease.com
+DOMAIN,httpdns.music.163.com
+DOMAIN,music.httpdns.c.163.com
+DOMAIN,lofter.httpdns.c.163.com
+IP-CIDR,59.111.239.61/32
+IP-CIDR,59.111.239.62/32
+IP-CIDR,115.236.121.51/32
+IP-CIDR,115.236.121.195/32
+
+# Oppo
+httpdns.push.oppomobile.com
+httpdns.ocloud.oppomobile.com
+
+# HeyTap
+httpdns.ocloud.heytapmobi.com
+httpdns.push.heytapmobi.com
+
+# Volcengine
+DOMAIN,httpdns.volcengineapi.com
+
+# Weibo
+DOMAIN,dns.weibo.cn
+IP-CIDR,39.97.128.148/32
+IP-CIDR,39.97.130.51/32
+
+# Tencent
+DOMAIN,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com.cn
+httpdns.kg.qq.com
+IP-CIDR,119.29.29.98/32
+IP-CIDR,119.29.29.99/32
+IP-CIDR,42.81.232.18/32
+IP-CIDR,42.187.182.106/32
+IP-CIDR,42.187.182.123/32
+IP-CIDR,42.187.184.154/32
+IP-CIDR,123.151.54.50/32
+IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128
+IP-CIDR6,240e:928:1400:10::25/128
+
+# Wework
+IP-CIDR,182.254.116.117/32
+IP-CIDR,182.254.118.119/32
+
+# Zhihu
+IP-CIDR,118.89.204.198/23
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128
+
+apidns.kwd.inkuai.com
+dns.jd.com
+dns.weibo.cn
+doh.ptqy.gitv.tv
+dotserver.douyucdn.cn
+httpdns.bilivideo.com
+httpdns.browser.miui.com
+httpdns.cctv.com
+httpdns.danuoyi.tbcache.com
+httpdns.gslb.yy.com
+httpdns.kwd.inkuai.com
+httpdns.pro
+httpdns.volcengineapi.com
+httpdns.yunxindns.com
+httpdns.zybang.com
