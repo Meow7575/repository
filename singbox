@@ -188,14 +188,14 @@
                 "type": "remote",
                 "tag": "telegram",
                 "format": "source",
-                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/Public/refs/heads/rule_set/telegram.json",
+                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/telegram.json",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "httpdns",
                 "format": "source",
-                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/Public/refs/heads/rule_set/httpdns.json",
+                "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/httpdns.json",
                 "download_detour": "direct"
             },
             {
