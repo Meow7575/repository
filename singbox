@@ -96,14 +96,7 @@
                 "action": "resolve"
             },
             {
-                "action": "sniff",
-                "sniffer": [
-                    "http",
-                    "tls",
-                    "quic",
-                    "dns"
-                ],
-                "timeout": "1s"
+                "action": "sniff"
             },
             {
                 "type": "logical",
