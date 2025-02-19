@@ -120,17 +120,13 @@
                 "action": "hijack-dns"
             },
             {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "network": "udp",
-                        "port": 443
-                    },
-                    {
-                        "protocol": "quic"
-                    }
-                ],
+                "protocol": "quic",
+                "action": "reject",
+                "method": "default"
+            },
+            {
+                "network": "udp",
+                "port": 443,
                 "action": "reject",
                 "method": "default"
             },
