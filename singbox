@@ -7,11 +7,8 @@
     "dns": {
         "servers": [
             {
-                "type": "https",
-                "tag": "local",
-                "server": "8.217.246.48",
-                "server_port": 5443,
-                "path": "@meow_is_top1/dns-query"
+                "type": "local",
+                "tag": "local"
             },
             {
                 "type": "fakeip",
@@ -22,11 +19,7 @@
         ],
         "rules": [
             {
-                "rule_set": [
-                    "fake-ip-filter",
-                    "private",
-                    "cn"
-                ],
+                "rule_set": "fake-ip-filter",
                 "server": "local"
             },
             {
