@@ -8,7 +8,7 @@
         "servers": [
             {
                 "tag": "local",
-                "address": "https://8.217.246.48:5443/@meow_is_top1/dns-query",
+                "address": "https://106.75.164.170/Eaf9nie7quee/endusers",
                 "detour": "direct"
             },
             {
@@ -24,6 +24,10 @@
             {
                 "rule_set": "fake-ip-filter",
                 "server": "local"
+            },
+            {
+                "query_type": "HTTPS",
+                "action": "reject"
             },
             {
                 "query_type": [
