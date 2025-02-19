@@ -93,9 +93,6 @@
     "route": {
         "rules": [
             {
-                "action": "resolve"
-            },
-            {
                 "action": "sniff"
             },
             {
