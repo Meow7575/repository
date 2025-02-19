@@ -103,8 +103,7 @@
                     "tls",
                     "quic",
                     "dns"
-                ],
-                "timeout": "3s"
+                ]
             },
             {
                 "type": "logical",
