@@ -120,6 +120,21 @@
                 "action": "hijack-dns"
             },
             {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "network": "udp",
+                        "port": 443
+                    },
+                    {
+                        "protocol": "quic"
+                    }
+                ],
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "httpdns",
                 "action": "reject",
                 "method": "default"
