@@ -7,17 +7,20 @@
     "dns": {
         "servers": [
             {
-                "type": "local",
-                "tag": "local"
+                "tag": "local",
+                "address": "https://8.217.246.48:5443/@meow_is_top1/dns-query",
+                "detour": "direct"
             },
             {
-                "type": "fakeip",
-                "tag": "fakeip",
-                "inet4_range": "198.18.0.0/15",
-                "inet6_range": "fc00::/18"
+                "address": "fakeip",
+                "tag": "fakeip"
             }
         ],
         "rules": [
+            {
+                "outbound": "any",
+                "server": "local"
+            },
             {
                 "rule_set": "fake-ip-filter",
                 "server": "local"
@@ -28,9 +31,14 @@
                     "AAAA"
                 ],
                 "action": "route-options",
-                "rewrite_ttl": 0
+                "rewrite_ttl": 1
             }
         ],
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18"
+        },
         "independent_cache": true
     },
     "inbounds": [
@@ -89,7 +97,14 @@
                 "action": "resolve"
             },
             {
-                "action": "sniff"
+                "action": "sniff",
+                "sniffer": [
+                    "http",
+                    "tls",
+                    "quic",
+                    "dns"
+                ],
+                "timeout": "3s"
             },
             {
                 "type": "logical",
@@ -193,8 +208,7 @@
             }
         ],
         "final": "final",
-        "auto_detect_interface": true,
-        "default_domain_resolver": "local"
+        "auto_detect_interface": true
     },
     "experimental": {
         "cache_file": {
