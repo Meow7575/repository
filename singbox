@@ -8,12 +8,12 @@
         "servers": [
             {
                 "tag": "local",
-                "address": "https://106.75.164.170/Eaf9nie7quee/noech",
+                "address": "https://8.217.246.48:5443/@meow_is_top1/dns-query",
                 "detour": "direct"
             },
             {
-                "address": "fakeip",
-                "tag": "fakeip"
+                "tag": "fakeip",
+                "address": "fakeip"
             }
         ],
         "rules": [
@@ -30,8 +30,8 @@
                     "A",
                     "AAAA"
                 ],
-                "action": "route-options",
-                "rewrite_ttl": 1
+                "server": "fakeip",
+                "rewrite_ttl": 0
             }
         ],
         "fakeip": {
@@ -212,14 +212,11 @@
     },
     "experimental": {
         "cache_file": {
-            "enabled": true,
-            "path": "./cache.db",
-            "cache_id": "v1",
-            "store_fakeip": true
+            "enabled": true
         },
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
-            "external_ui": "zashboard",
+            "external_ui": "ui",
             "external_ui_download_url": "https://ghfast.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
             "external_ui_download_detour": "direct"
         }
