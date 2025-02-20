@@ -140,11 +140,6 @@
                 "method": "default"
             },
             {
-                "rule_set": "huawei",
-                "action": "reject",
-                "method": "default"
-            },
-            {
                 "rule_set": "telegram",
                 "outbound": "telegram"
             },
@@ -217,13 +212,6 @@
                 "tag": "httpdns",
                 "format": "source",
                 "url": "https://ghfast.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/httpdns.json",
-                "download_detour": "direct"
-            },
-            {
-                "type": "remote",
-                "tag": "huawei",
-                "format": "source",
-                "url": "https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/singbox-ruleset.js?url=https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/Huawei",
                 "download_detour": "direct"
             },
             {
