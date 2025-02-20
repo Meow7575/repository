@@ -22,6 +22,14 @@
                 "server": "local"
             },
             {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "fake-ip-filter",
                 "server": "local"
             },
