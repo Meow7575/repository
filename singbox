@@ -219,6 +219,13 @@
             },
             {
                 "type": "remote",
+                "tag": "huawei",
+                "format": "source",
+                "url": "https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/singbox-ruleset.js?url=https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/Huawei",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
                 "tag": "fake-ip-filter",
                 "format": "binary",
                 "url": "https://ghfast.top/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/fakeip-filter.srs",
