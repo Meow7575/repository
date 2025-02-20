@@ -22,6 +22,11 @@
                 "server": "local"
             },
             {
+                "query_type": "HTTPS",
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "fake-ip-filter",
                 "server": "local"
             },
