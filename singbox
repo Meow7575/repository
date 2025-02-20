@@ -143,6 +143,11 @@
                 "method": "default"
             },
             {
+                "rule_set": "huawei",
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "telegram",
                 "outbound": "telegram"
             },
