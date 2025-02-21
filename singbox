@@ -99,17 +99,13 @@
     "route": {
         "rules": [
             {
-                "port": [
-                    80,
-                    443
-                ],
                 "action": "sniff",
                 "sniffer": [
                     "http",
                     "tls",
-                    "quic",
-                    "dns"
-                ]
+                    "quic"
+                ],
+                "timeout": 75
             },
             {
                 "type": "logical",
