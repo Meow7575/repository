@@ -99,6 +99,19 @@
     "route": {
         "rules": [
             {
+                "port": [
+                    80,
+                    443
+                ],
+                "action": "sniff",
+                "sniffer": [
+                    "http",
+                    "tls",
+                    "quic",
+                    "dns"
+                ]
+            },
+            {
                 "type": "logical",
                 "mode": "or",
                 "rules": [
@@ -110,6 +123,11 @@
                     }
                 ],
                 "action": "hijack-dns"
+            },
+            {
+                "protocol": "quic",
+                "action": "reject",
+                "method": "default"
             },
             {
                 "network": "udp",
