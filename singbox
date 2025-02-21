@@ -123,6 +123,11 @@
                 "method": "default"
             },
             {
+                "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "telegram",
                 "outbound": "telegram"
             },
@@ -206,6 +211,13 @@
                 "tag": "fake-ip-filter",
                 "format": "binary",
                 "url": "https://ghfast.top/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/fakeip-filter.srs",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "AWAvenue-Ads-Rule-Singbox-regex",
+                "format": "binary",
+                "url": "https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs",
                 "download_detour": "direct"
             }
         ],
