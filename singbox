@@ -145,6 +145,10 @@
             {
                 "rule_set": "cn",
                 "outbound": "direct"
+            },
+            {
+                "domain": "emby-direct.pilipiliultra.com",
+                "outbound": "proxy"
             }
         ],
         "rule_set": [
