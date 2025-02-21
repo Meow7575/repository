@@ -118,20 +118,6 @@
                 "method": "default"
             },
             {
-                "action": "sniff",
-                "sniffer": [
-                    "http",
-                    "tls",
-                    "quic"
-                ],
-                "timeout": "40ms"
-            },
-            {
-                "protocol": "quic",
-                "action": "reject",
-                "method": "default"
-            },
-            {
                 "rule_set": "httpdns",
                 "action": "reject",
                 "method": "default"
