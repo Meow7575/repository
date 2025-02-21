@@ -22,6 +22,11 @@
                 "server": "local"
             },
             {
+                "query_type": "HTTPS",
+                "action": "reject",
+                "method": "default"
+            },
+            {
                 "rule_set": "fake-ip-filter",
                 "server": "local"
             },
@@ -94,18 +99,6 @@
     "route": {
         "rules": [
             {
-                "action": "resolve"
-            },
-            {
-                "action": "sniff",
-                "sniffer": [
-                    "http",
-                    "tls",
-                    "quic",
-                    "dns"
-                ]
-            },
-            {
                 "type": "logical",
                 "mode": "or",
                 "rules": [
@@ -117,11 +110,6 @@
                     }
                 ],
                 "action": "hijack-dns"
-            },
-            {
-                "protocol": "quic",
-                "action": "reject",
-                "method": "default"
             },
             {
                 "network": "udp",
