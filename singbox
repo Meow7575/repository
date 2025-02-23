@@ -118,6 +118,14 @@
                 "method": "default"
             },
             {
+                "action": "sniff",
+                "sniffer": [
+                    "tls",
+                    "http",
+                    "quic"
+                ]
+            },
+            {
                 "rule_set": "httpdns",
                 "action": "reject",
                 "method": "default"
