@@ -118,12 +118,11 @@
                 "method": "default"
             },
             {
-                "action": "sniff",
-                "sniffer": [
-                    "tls",
-                    "http",
-                    "quic"
-                ]
+                "rule_set": "telegram",
+                "outbound": "telegram"
+            },
+            {
+                "action": "sniff"
             },
             {
                 "rule_set": "httpdns",
@@ -134,10 +133,6 @@
                 "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
                 "action": "reject",
                 "method": "default"
-            },
-            {
-                "rule_set": "telegram",
-                "outbound": "telegram"
             },
             {
                 "rule_set": "spotify",
