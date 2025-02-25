@@ -125,9 +125,10 @@
                 "action": "sniff",
                 "sniffer": [
                     "tls",
-                    "http",
+                    "http"
                     "quic"
-                ]
+                ],
+                "timeout": "40ms"
             },
             {
                 "rule_set": "httpdns",
