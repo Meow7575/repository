@@ -9,9 +9,10 @@
             {
                 "type": "https",
                 "tag": "local",
+                "detour": "direct",
                 "server": "106.75.164.170",
-                "path": "Eaf9nie7quee/endusers",
-                "detour": "direct"
+                "server_port": 0,
+                "path": "Eaf9nie7quee/endusers"
             },
             {
                 "type": "fakeip",
@@ -23,13 +24,11 @@
         "rules": [
             {
                 "query_type": "HTTPS",
-                "action": "reject",
-                "method": "default"
+                "action": "reject"
             },
             {
                 "query_type": "AAAA",
-                "action": "reject",
-                "method": "default"
+                "action": "reject"
             },
             {
                 "rule_set": "fake-ip-filter",
@@ -49,7 +48,7 @@
     "inbounds": [
         {
             "type": "tun",
-            "mtu": 65535,
+            "mtu": 1500,
             "address": [
                 "172.19.0.0/30",
                 "fdfe:dcba:9876::/126"
@@ -116,8 +115,7 @@
             {
                 "network": "udp",
                 "port": 443,
-                "action": "reject",
-                "method": "default"
+                "action": "reject"
             },
             {
                 "rule_set": "telegram",
@@ -134,13 +132,11 @@
             },
             {
                 "rule_set": "httpdns",
-                "action": "reject",
-                "method": "default"
+                "action": "reject"
             },
             {
                 "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
-                "action": "reject",
-                "method": "default"
+                "action": "reject"
             },
             {
                 "rule_set": "spotify",
