@@ -48,14 +48,12 @@
     "inbounds": [
         {
             "type": "tun",
-            "mtu": 1500,
             "address": [
                 "172.19.0.0/30",
                 "fdfe:dcba:9876::/126"
             ],
             "auto_route": true,
-            "strict_route": true,
-            "stack": "gvisor"
+            "strict_route": true
         }
     ],
     "outbounds": [
