@@ -43,7 +43,7 @@
                 "server": "fakeip",
                 "rewrite_ttl": 0
             }
-        ]
+        ],
         "independent_cache": true
     },
     "inbounds": [
