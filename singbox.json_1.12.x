@@ -43,12 +43,7 @@
                 "server": "fakeip",
                 "rewrite_ttl": 0
             }
-        ],
-        "fakeip": {
-            "enabled": true,
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18"
-        },
+        ]
         "independent_cache": true
     },
     "inbounds": [
