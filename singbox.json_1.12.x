@@ -116,13 +116,6 @@
                 "outbound": "telegram"
             },
             {
-                "action": "sniff",
-                "sniffer": [
-                    "tls",
-                    "http"
-                ]
-            },
-            {
                 "rule_set": "httpdns",
                 "action": "reject"
             },
