@@ -120,19 +120,7 @@
                 "outbound": "telegram"
             },
             {
-                "port": [
-                    80,
-                    443,
-                    8000,
-                    8080
-                ],
-                "action": "sniff",
-                "sniffer": [
-                    "tls",
-                    "http",
-                    "quic"
-                ],
-                "timeout": "40ms"
+                "action": "sniff"
             },
             {
                 "rule_set": "httpdns",
