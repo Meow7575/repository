@@ -31,10 +31,6 @@
                 "action": "reject"
             },
             {
-                "rule_set": "fake-ip-filter",
-                "server": "local"
-            },
-            {
                 "query_type": [
                     "A",
                     "AAAA"
@@ -120,7 +116,11 @@
                 "outbound": "telegram"
             },
             {
-                "action": "sniff"
+                "action": "sniff",
+                "sniffer": [
+                    "tls",
+                    "http"
+                ]
             },
             {
                 "rule_set": "httpdns",
@@ -203,13 +203,6 @@
                 "tag": "httpdns",
                 "format": "source",
                 "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/httpdns.json",
-                "download_detour": "direct"
-            },
-            {
-                "type": "remote",
-                "tag": "fake-ip-filter",
-                "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/fakeip-filter.srs",
                 "download_detour": "direct"
             },
             {
