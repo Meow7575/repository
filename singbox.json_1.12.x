@@ -120,6 +120,12 @@
                 "outbound": "telegram"
             },
             {
+                "port": [
+                    80,
+                    443,
+                    8000,
+                    8080
+                ],
                 "action": "sniff",
                 "sniffer": [
                     "tls",
