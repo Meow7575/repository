@@ -27,10 +27,6 @@
                 "action": "reject"
             },
             {
-                "query_type": "AAAA",
-                "action": "reject"
-            },
-            {
                 "query_type": [
                     "A",
                     "AAAA"
@@ -44,7 +40,10 @@
     "inbounds": [
         {
             "type": "tun",
-            "address": "172.19.0.0/30",
+            "address": [
+                "172.19.0.0/30",
+                "fdfe:dcba:9876::/126"
+            ],
             "auto_route": true,
             "strict_route": true
         }
