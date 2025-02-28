@@ -121,7 +121,7 @@
             },
             {
                 "action": "resolve",
-                "strategy": "ipv4_only",
+                "strategy": "prefer_ipv4",
                 "disable_cache": true
             },
             {
