@@ -124,6 +124,11 @@
                 "action": "reject"
             },
             {
+                "action": "resolve",
+                "strategy": "ipv4_only",
+                "disable_cache": true
+            },
+            {
                 "rule_set": "spotify",
                 "outbound": "spotify"
             },
