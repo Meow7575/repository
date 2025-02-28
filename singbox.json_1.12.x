@@ -136,7 +136,7 @@
                 "outbound": "proxy"
             },
             {
-                "rule_set": "private",
+                "ip_is_private": true,
                 "outbound": "direct"
             },
             {
@@ -151,37 +151,30 @@
         "rule_set": [
             {
                 "type": "remote",
-                "tag": "private",
-                "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/private.srs",
-                "download_detour": "direct"
-            },
-            {
-                "type": "remote",
                 "tag": "cn",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geoip/cn.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "spotify",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/spotify.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-spotify.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "gfw",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/gfw.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-greatfire.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "geolocation-!cn",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/geolocation-!cn.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs",
                 "download_detour": "direct"
             },
             {
