@@ -208,7 +208,10 @@
         ],
         "final": "final",
         "auto_detect_interface": true,
-        "default_domain_resolver": "local"
+        "default_domain_resolver": {
+            "server": "local",
+            "disable_cache": true
+        }
     },
     "experimental": {
         "cache_file": {
