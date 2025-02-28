@@ -146,6 +146,13 @@
             {
                 "domain": "emby-direct.pilipiliultra.com",
                 "outbound": "proxy"
+            },
+            {
+                "domain": [
+                    "deepseek.com",
+                    "platform.deepseek.com"
+                ],
+                "outbound": "direct"
             }
         ],
         "rule_set": [
