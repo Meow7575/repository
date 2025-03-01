@@ -26,10 +26,7 @@
                 "action": "reject"
             },
             {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
+                "query_type": "A",
                 "server": "fakeip",
                 "rewrite_ttl": 0
             }
