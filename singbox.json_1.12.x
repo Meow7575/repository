@@ -120,11 +120,6 @@
                 "action": "reject"
             },
             {
-                "action": "resolve",
-                "strategy": "prefer_ipv4",
-                "disable_cache": true
-            },
-            {
                 "rule_set": "spotify",
                 "outbound": "spotify"
             },
