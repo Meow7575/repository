@@ -63,7 +63,7 @@
       "tag": "spotify",
       "outbounds": [
         "direct",
-        "proxy
+        "proxy"
       ],
       "interrupt_exist_connections": true
     },
