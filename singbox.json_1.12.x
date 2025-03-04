@@ -12,7 +12,7 @@
                 "detour": "direct",
                 "server": "8.217.246.48",
                 "server_port": 5443,
-                "path": "@meow_is_top1/dns-query
+                "path": "@meow_is_top1/dns-query"
             },
             {
                 "type": "fakeip",
