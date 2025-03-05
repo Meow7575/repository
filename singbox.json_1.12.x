@@ -1,26 +1,18 @@
 {
     "log": {
         "level": "info",
-        "output": "box.log",
+        "output": "sing-box.log",
         "timestamp": true
     },
     "dns": {
         "servers": [
             {
-                "type": "https",
+                "type": "h3",
                 "tag": "novaxns",
                 "detour": "direct",
                 "server": "8.217.246.48",
                 "server_port": 5443,
                 "path": "@meow_is_top1/dns-query"
-            },
-            {
-                "type": "https",
-                "tag": "yadns",
-                "detour": "direct",
-                "server": "106.75.164.170",
-                "server_port": 443,
-                "path": "Eaf9nie7quee/endusers"
             },
             {
                 "type": "fakeip",
@@ -32,11 +24,6 @@
             {
                 "query_type": "HTTPS",
                 "action": "reject"
-            },
-            {
-                "ip_is_private": true,
-                "rule_set": "cn",
-                "server": "yadns"
             },
             {
                 "query_type": "A",
