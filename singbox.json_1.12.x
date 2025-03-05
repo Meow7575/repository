@@ -7,7 +7,7 @@
     "dns": {
         "servers": [
             {
-                "type": "h3",
+                "type": "https",
                 "tag": "novaxns",
                 "detour": "direct",
                 "server": "8.217.246.48",
