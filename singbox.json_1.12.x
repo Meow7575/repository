@@ -8,11 +8,19 @@
         "servers": [
             {
                 "type": "https",
-                "tag": "local",
+                "tag": "novaxns",
                 "detour": "direct",
                 "server": "8.217.246.48",
                 "server_port": 5443,
                 "path": "@meow_is_top1/dns-query"
+            },
+            {
+                "type": "https",
+                "tag": "yadns",
+                "detour": "direct",
+                "server": "106.75.164.170",
+                "server_port": 443,
+                "path": "Eaf9nie7quee/endusers"
             },
             {
                 "type": "fakeip",
@@ -24,6 +32,11 @@
             {
                 "query_type": "HTTPS",
                 "action": "reject"
+            },
+            {
+                "ip_is_private": true,
+                "rule_set": "cn",
+                "server": "yadns"
             },
             {
                 "query_type": "A",
@@ -198,7 +211,7 @@
         ],
         "final": "final",
         "auto_detect_interface": true,
-        "default_domain_resolver": "local"
+        "default_domain_resolver": "novaxns"
     },
     "experimental": {
         "cache_file": {
