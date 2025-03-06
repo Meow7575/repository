@@ -136,6 +136,10 @@
             {
                 "domain": "emby-direct.pilipiliultra.com",
                 "outbound": "proxy"
+            },,
+            {
+                "domain": "vision.recmata.net",
+                "outbound": "proxy"
             },
             {
                 "domain": [
