@@ -142,6 +142,10 @@
                 "outbound": "proxy"
             },
             {
+                "domain": "kessoku-bando.biliblili.uk",
+                "outbound": "proxy"
+            },
+            {
                 "domain": [
                     "deepseek.com",
                     "platform.deepseek.com"
