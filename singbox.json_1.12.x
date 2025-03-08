@@ -137,6 +137,10 @@
                 "action": "reject"
             },
             {
+                "rule_set": "dns",
+                "action": "reject"
+            },
+            {
                 "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
                 "action": "reject"
             },
@@ -221,6 +225,13 @@
                 "tag": "httpdns",
                 "format": "source",
                 "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/httpdns.json",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
+                "tag": "dns",
+                "format": "source",
+                "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/dns.json",
                 "download_detour": "direct"
             },
             {
