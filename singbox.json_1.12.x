@@ -69,6 +69,33 @@
         },
         {
             "type": "selector",
+            "tag": "pilipili",
+            "outbounds": [
+                "direct",
+                "proxy"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "jms",
+            "outbounds": [
+                "direct",
+                "proxy"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
+            "tag": "結束バンド",
+            "outbounds": [
+                "direct",
+                "proxy"
+            ],
+            "interrupt_exist_connections": true
+        },
+        {
+            "type": "selector",
             "tag": "final",
             "outbounds": [
                 "direct",
@@ -135,15 +162,15 @@
             },
             {
                 "domain": "emby-direct.pilipiliultra.com",
-                "outbound": "proxy"
+                "outbound": "pilipili"
             },
             {
                 "domain": "vision.recmata.net",
-                "outbound": "proxy"
+                "outbound": "jms"
             },
             {
                 "domain": "kessoku-bando.biliblili.uk",
-                "outbound": "proxy"
+                "outbound": "結束バンド"
             },
             {
                 "domain": [
