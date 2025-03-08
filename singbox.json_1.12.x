@@ -149,6 +149,17 @@
                 "outbound": "spotify"
             },
             {
+                "rule_set": [
+                    "gfw",
+                    "geolocation-!cn"
+                ],
+                "action": "sniff",
+                "sniffer": [
+                    "http",
+                    "tls"
+                ]
+            },
+            {
                 "rule_set": "gfw",
                 "outbound": "proxy"
             },
