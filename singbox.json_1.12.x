@@ -146,6 +146,10 @@
                 "action": "reject"
             },
             {
+                "rule_set": "hw",
+                "action": "reject"
+            },
+            {
                 "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
                 "action": "reject"
             },
@@ -254,7 +258,7 @@
                 "type": "remote",
                 "tag": "hw",
                 "format": "source",
-                "url": "https://githubsg.lilyya.top/https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/singbox-ruleset.js?url=https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt",
+                "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/hw.json",
                 "download_detour": "direct"
             },
             {
