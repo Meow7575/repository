@@ -36,8 +36,8 @@
     "inbounds": [
         {
             "type": "socks",
-            "listen": "::",
-            "listen_port": 2333
+            "listen": "127.0.0.1",
+            "listen_port": 65535
         },
         {
             "type": "tun",
