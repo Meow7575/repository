@@ -252,6 +252,13 @@
             },
             {
                 "type": "remote",
+                "tag": "hw",
+                "format": "source",
+                "url": "https://githubsg.lilyya.top/https://meow.sakullla.site/NQwsaHm1yuWNHFox6Abi/api/file/singbox-ruleset.js?url=https://raw.githubusercontent.com/hagezi/dns-blocklists/refs/heads/main/adblock/native.huawei.txt",
+                "download_detour": "direct"
+            },
+            {
+                "type": "remote",
                 "tag": "AWAvenue-Ads-Rule-Singbox-regex",
                 "format": "binary",
                 "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs",
