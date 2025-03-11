@@ -137,7 +137,7 @@
                 "action": "reject"
             },
             {
-                "inbound": "sing-socks"，
+                "inbound": "sing-socks",
                 "rule_set": "telegram",
                 "outbound": "telegram"
             },
