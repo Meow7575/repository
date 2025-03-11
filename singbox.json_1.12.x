@@ -280,9 +280,7 @@
         },
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
-            "external_ui": "dashboard",
-            "external_ui_download_url": "https://githubsg.lilyya.top/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
-            "external_ui_download_detour": "direct"
+            "external_ui": "ui"
         }
     }
 }
