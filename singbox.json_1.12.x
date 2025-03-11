@@ -35,6 +35,11 @@
     },
     "inbounds": [
         {
+            "type": "socks",
+            "listen": "::",
+            "listen_port": 2333
+        },
+        {
             "type": "tun",
             "address": "172.19.0.0/30",
             "auto_route": true,
