@@ -7,7 +7,7 @@
     "dns": {
         "servers": [
             {
-                "type": "h3",
+                "type": "https",
                 "tag": "novaxns",
                 "detour": "direct",
                 "server": "8.217.246.48",
@@ -206,6 +206,10 @@
                     "deepseek.com",
                     "platform.deepseek.com"
                 ],
+                "outbound": "direct"
+            },
+            {
+                "domain": "ecs-api.xns.one",
                 "outbound": "direct"
             }
         ],
