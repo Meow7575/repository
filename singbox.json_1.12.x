@@ -15,6 +15,12 @@
                 "path": "@meow_is_top1/dns-query"
             },
             {
+                "type": "udp",
+                "tag": "tencent",
+                "server": "119.29.29.29",
+                "server_port": 53
+            },
+            {
                 "type": "fakeip",
                 "tag": "fakeip",
                 "inet4_range": "198.18.0.0/15"
@@ -24,6 +30,16 @@
             {
                 "query_type": "HTTPS",
                 "action": "reject"
+            },
+            {
+                "domain": [
+                    "cinema.makima.online",
+                    "theater.makima.online",
+                    "anime.makima.online",
+                    "celluloid.makima.online",
+                    "restrict.makima.online"
+                ],
+                "server": "tencent"
             },
             {
                 "query_type": "A",
@@ -68,7 +84,7 @@
         },
         {
             "type": "selector",
-            "tag": "spotify",
+            "tag": "apple",
             "outbounds": [
                 "direct",
                 "proxy"
@@ -154,24 +170,41 @@
                 "action": "reject"
             },
             {
-                "rule_set": "AWAvenue-Ads-Rule-Singbox-regex",
-                "action": "reject"
+                "domain": "emby-direct.pilipiliultra.com",
+                "outbound": "pilipili"
             },
             {
-                "rule_set": "spotify",
-                "outbound": "spotify"
+                "domain": "vision.recmata.net",
+                "outbound": "jms"
             },
             {
-                "inbound": "sing-tun",
-                "rule_set": [
-                    "gfw",
-                    "geolocation-!cn"
+                "domain": "kessoku-bando.biliblili.uk",
+                "outbound": "結束バンド"
+            },
+            {
+                "domain": [
+                    "https://cinema.makima.online",
+                    "https://theater.makima.online",
+                    "https://anime.makima.online",
+                    "https://celluloid.makima.online",
+                    "https://restrict.makima.online"
                 ],
-                "action": "sniff",
-                "sniffer": [
-                    "http",
-                    "tls"
-                ]
+                "outbound": "direct"
+            },
+            {
+                "domain": [
+                    "deepseek.com",
+                    "platform.deepseek.com"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "domain": "ecs-api.xns.one",
+                "outbound": "direct"
+            },
+            {
+                "rule_set": "apple",
+                "outbound": "apple"
             },
             {
                 "rule_set": "gfw",
@@ -188,29 +221,6 @@
             {
                 "rule_set": "cn",
                 "outbound": "direct"
-            },
-            {
-                "domain": "emby-direct.pilipiliultra.com",
-                "outbound": "pilipili"
-            },
-            {
-                "domain": "vision.recmata.net",
-                "outbound": "jms"
-            },
-            {
-                "domain": "kessoku-bando.biliblili.uk",
-                "outbound": "結束バンド"
-            },
-            {
-                "domain": [
-                    "deepseek.com",
-                    "platform.deepseek.com"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "domain": "ecs-api.xns.one",
-                "outbound": "direct"
             }
         ],
         "rule_set": [
@@ -218,28 +228,28 @@
                 "type": "remote",
                 "tag": "cn",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geoip/raw/refs/heads/rule-set/geoip-cn.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/Loyalsoldier/geoip/raw/refs/heads/release/srs/cn.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
-                "tag": "spotify",
+                "tag": "apple",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-spotify.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/CHIZI-0618/v2ray-rules-dat/raw/refs/heads/release/singbox_rule_set/geosite-apple.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "gfw",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-greatfire.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/CHIZI-0618/v2ray-rules-dat/raw/refs/heads/release/singbox_rule_set/geosite-gfw.srs",
                 "download_detour": "direct"
             },
             {
                 "type": "remote",
                 "tag": "geolocation-!cn",
                 "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://github.com/SagerNet/sing-geosite/raw/refs/heads/rule-set/geosite-geolocation-!cn.srs",
+                "url": "https://githubsg.lilyya.top/https://github.com/CHIZI-0618/v2ray-rules-dat/raw/refs/heads/release/singbox_rule_set/geosite-geolocation-!cn.srs",
                 "download_detour": "direct"
             },
             {
@@ -268,13 +278,6 @@
                 "tag": "hw",
                 "format": "source",
                 "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/Meow7575/repository/refs/heads/main/hw.json",
-                "download_detour": "direct"
-            },
-            {
-                "type": "remote",
-                "tag": "AWAvenue-Ads-Rule-Singbox-regex",
-                "format": "binary",
-                "url": "https://githubsg.lilyya.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Singbox-regex.srs",
                 "download_detour": "direct"
             }
         ],
